@@ -282,7 +282,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   //   [onCloseMovie]
   // );
 
-  const API_URL = "http://www.omdbapi.com/";
+  const API_URL = "https://www.omdbapi.com/";
 
   useEffect(
     function () {
