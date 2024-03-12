@@ -111,7 +111,7 @@ function Logo() {
   return (
     <div className="logo">
       <span role="img">🍿</span>
-      <h1>usePopcorn</h1>
+      <h1>My Movies Reviews</h1>
     </div>
   );
 }
@@ -282,13 +282,13 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   //   [onCloseMovie]
   // );
 
+  const API_URL = "http://www.omdbapi.com/";
+
   useEffect(
     function () {
       async function getMovieDetails() {
         setIsLoading(true);
-        const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
-        );
+        const res = await fetch(`${API_URL}?apikey=${KEY}&i=${selectedId}`);
         const data = await res.json();
         // console.log(data);
         setMovie(data);
